@@ -2,6 +2,8 @@ import "@rainbow-me/rainbowkit/styles.css";
 import { Metadata } from "next";
 import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
 import { ThemeProvider } from "~~/components/ThemeProvider";
+// import { AuthCoreContextProvider } from '@particle-network/auth-core-modal';
+// import { LineaGoerli } from '@particle-network/chains';
 import "~~/styles/globals.css";
 
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
@@ -47,7 +49,27 @@ const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
     <html suppressHydrationWarning>
       <body>
         <ThemeProvider enableSystem>
-          <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
+          <ScaffoldEthAppWithProviders>
+            {/* <AuthCoreContextProvider
+              options={{
+                projectId: process.env.NEXT_PUBLIC_REACT_APP_PROJECT_ID,
+                clientKey: process.env.NEXT_PUBLIC_REACT_APP_CLIENT_KEY,
+                appId: process.env.NEXT_PUBLIC_REACT_APP_APP_ID,
+                erc4337: {
+                  name: 'SIMPLE',
+                  version: '1.0.0',
+                },
+                wallet: {
+                  visible: true,
+                  customStyle: {
+                      supportChains: [LineaGoerli],
+                  }
+                }
+              }}
+            > */}
+            {children}
+            {/* </AuthCoreContextProvider> */}
+          </ScaffoldEthAppWithProviders>
         </ThemeProvider>
       </body>
     </html>

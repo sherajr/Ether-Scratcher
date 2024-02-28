@@ -8,6 +8,12 @@ import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
+// import { useEthereum, useConnect, useAuthCore } from '@particle-network/auth-core-modal';
+// import { LineaGoerli } from '@particle-network/chains';
+// import { AAWrapProvider, SendTransactionMode, SmartAccount } from '@particle-network/aa';
+// import { ethers } from 'ethers';
+// import { notification } from 'antd';
+
 type HeaderMenuLink = {
   label: string;
   href: string;

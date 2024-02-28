@@ -2,12 +2,20 @@
 
 import Link from "next/link";
 import type { NextPage } from "next";
-import { useAccount } from "wagmi";
+// import { useAccount } from "wagmi";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { Address } from "~~/components/scaffold-eth";
+
+// import { useEthereum, useConnect, useAuthCore } from '@particle-network/auth-core-modal';
+// import { LineaGoerli } from '@particle-network/chains';
+// import { AAWrapProvider, SendTransactionMode, SmartAccount } from '@particle-network/aa';
+// import { ethers } from 'ethers';
+// import { notification } from 'antd';
+// import { Address } from "~~/components/scaffold-eth";
 
 const Home: NextPage = () => {
-  const { address: connectedAddress } = useAccount();
+  // const { provider } = useEthereum();
+  // const { connect, disconnect } = useConnect();
+  // const { userInfo } = useAuthCore();
 
   return (
     <>
@@ -15,28 +23,13 @@ const Home: NextPage = () => {
         <div className="px-5">
           <h1 className="text-center">
             <span className="block text-2xl mb-2">Welcome to</span>
-            <span className="block text-4xl font-bold">Scaffold-ETH 2</span>
+            <span className="block text-4xl font-bold">Ether Scratcher</span>
           </h1>
           <div className="flex justify-center items-center space-x-2">
             <p className="my-2 font-medium">Connected Address:</p>
-            <Address address={connectedAddress} />
+            {/* <Address address={connectedAddress} /> */}
           </div>
-          <p className="text-center text-lg">
-            Get started by editing{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/nextjs/app/page.tsx
-            </code>
-          </p>
-          <p className="text-center text-lg">
-            Edit your smart contract{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              YourContract.sol
-            </code>{" "}
-            in{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/hardhat/contracts
-            </code>
-          </p>
+          <p className="text-center text-lg">Get started by purchasing a Scratcher!</p>
         </div>
 
         <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
