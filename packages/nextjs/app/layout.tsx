@@ -49,27 +49,7 @@ const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
     <html suppressHydrationWarning>
       <body>
         <ThemeProvider enableSystem>
-          <ScaffoldEthAppWithProviders>
-            {/* <AuthCoreContextProvider
-              options={{
-                projectId: process.env.NEXT_PUBLIC_REACT_APP_PROJECT_ID,
-                clientKey: process.env.NEXT_PUBLIC_REACT_APP_CLIENT_KEY,
-                appId: process.env.NEXT_PUBLIC_REACT_APP_APP_ID,
-                erc4337: {
-                  name: 'SIMPLE',
-                  version: '1.0.0',
-                },
-                wallet: {
-                  visible: true,
-                  customStyle: {
-                      supportChains: [LineaGoerli],
-                  }
-                }
-              }}
-            > */}
-            {children}
-            {/* </AuthCoreContextProvider> */}
-          </ScaffoldEthAppWithProviders>
+          <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
         </ThemeProvider>
       </body>
     </html>
