@@ -2,9 +2,11 @@ import "@rainbow-me/rainbowkit/styles.css";
 import { Metadata } from "next";
 import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
 import { ThemeProvider } from "~~/components/ThemeProvider";
-// import { AuthCoreContextProvider } from '@particle-network/auth-core-modal';
-// import { LineaGoerli } from '@particle-network/chains';
 import "~~/styles/globals.css";
+
+// import { AuthType } from '@particle-network/auth-core';
+// import { AuthCoreContextProvider, PromptSettingType } from '@particle-network/auth-core-modal';
+// import { arbitrumGoerli } from "viem/chains";
 
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
